@@ -1,0 +1,8 @@
+theme: default
+menus:
+  Test:
+    title: 消息
+    menus:
+      MessageTable:
+        title: 消息表格
+        component: hly.message.hly.ui.MessageTable

@@ -1,0 +1,17 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://rm-2ze4wy4e7rozzo331.rwlb.rds.aliyuncs.com:${MYSQL_PORT:3306}/${MYSQL_DATABASE:message}?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    username: ${MYSQL_USERNAME:message}
+    password: ${MYSQL_PASSWORD:19881230Hly}
+    hikari:
+      maxLifetime: 180000
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        globally_quoted_identifiers: false
+    hibernate:
+      ddl-auto: ${AUTO_DDL_TYPE:update}
+    database-platform: org.hibernate.dialect.MySQL57Dialect
+    defer-datasource-initialization: true
